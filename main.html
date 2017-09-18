@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>todolist</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .icon {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .icon-delete {
+      background-color: #DC544B;
+      background-image: url('./assets/delete.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 16px 16px;
+    }
+    header {
+      background-color: #3498DB;
+      color: #fff;
+      display: flex;
+      height: 60px;
+      align-items: center;
+      padding: 5px;
+    }
+    header .title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .con {
+      width: 350px;
+    }
+    .con .input {
+      display: flex;
+      height: 50px;
+      line-height: 50px;
+    }
+    .con .input input {
+      flex: 1;
+      outline: 0;
+      border: 0;
+      padding: 5px;
+      font-size: 14px;
+    }
+    .con ul li {
+      display: flex;
+      background-color: #fff;
+      align-items: center;
+      padding: 16px 5px;
+      position: relative;
+    }
+    .con ul li.finished {
+      color: #888;
+      text-decoration: line-through;
+      font-style: italic;
+    }
+    .con ul li .options {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      z-index: 2;
+      font-size: 0;
+      transition: .3s ease;
+      transform: translate3d(100%, 0, 0);
+    }
+    .con ul li .options .icon {
+      width: 30px;
+      height: 100%;
+    }
+    .con ul li:hover {
+      cursor: pointer;
+    }
+    .con ul li:hover .options {
+      transform: translate3d(0, 0, 0);
+    }
+    .con ul li:nth-child(odd) {
+      background-color: #ECF0F1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="title">TO DO LIST</div>
+  </header>
+  <div class="con">
+    <div class="input">
+      <input type="text" placeholder="add something">
+    </div>
+    <ul>
+      <li class="finished">
+        todolist
+        <div class="options">
+          <!-- <i class="icon icon-edit"></i> -->
+          <i class="icon icon-delete"></i>
+        </div>
+      </li>
+      <li>
+        todolist
+        <div class="options">
+          <!-- <i class="icon icon-edit"></i> -->
+          <i class="icon icon-delete"></i>
+        </div>
+      </li>
+      <li>
+        todolist
+        <div class="options">
+          <!-- <i class="icon icon-edit"></i> -->
+          <i class="icon icon-delete"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <footer></footer>
+</body>
+</html>
