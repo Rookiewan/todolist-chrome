@@ -55,7 +55,7 @@
       padding: 16px 5px;
       position: relative;
     }
-    .con ul li.finished {
+    .con ul li.done {
       color: #888;
       text-decoration: line-through;
       font-style: italic;
@@ -91,32 +91,11 @@
   </header>
   <div class="con">
     <div class="input">
-      <input type="text" placeholder="add something">
+      <input type="text" placeholder="add something" id="input">
     </div>
-    <ul>
-      <li class="finished">
-        todolist
-        <div class="options">
-          <!-- <i class="icon icon-edit"></i> -->
-          <i class="icon icon-delete"></i>
-        </div>
-      </li>
-      <li>
-        todolist
-        <div class="options">
-          <!-- <i class="icon icon-edit"></i> -->
-          <i class="icon icon-delete"></i>
-        </div>
-      </li>
-      <li>
-        todolist
-        <div class="options">
-          <!-- <i class="icon icon-edit"></i> -->
-          <i class="icon icon-delete"></i>
-        </div>
-      </li>
-    </ul>
+    <ul id="todolist"></ul>
   </div>
   <footer></footer>
+  <script src="./main.js"></script>
 </body>
 </html>
